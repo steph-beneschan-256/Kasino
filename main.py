@@ -71,4 +71,4 @@ async def b(ctx, arg):
 async def i(ctx):
     await ctx.send(t)
 
-custom.run('Nzk1NzI5MzQ4ODAzNjkwNTE2.X_NmtA.9NjDj32e5sQat7Y9o8U5_KT08Qc')
+custom.run('Token-goes-here')
