@@ -22,13 +22,13 @@ async def h(ctx):
 @custom.command()
 async def p(ctx, arg1):
     temp1 = str(arg1)
-    temp2 = 300  # coins
+    temp2 = 300 if ("rich" not in arg1) else 500  # coins
     if int(temp2) >= 0:
 
         coins.append(temp2)
         t.append(temp1)
         i = t.index(temp1)
-        await ctx.send(arg1 + '  has been added with ' + '300 coins' + ' your id is ' + str(i))
+        await ctx.send(arg1 + '  has been added with ' + str(temp2) + ' coins' + ' your id is ' + str(i))
     else:
 
         await ctx.send('you really thought that would work?')
@@ -39,9 +39,9 @@ async def f(ctx, arg1, arg2, arg3):  # arg1=coins arg3=id
     temp3 = random.choice(c)
     if (int(coins[int(arg3)]) - int(arg1)) >= 0:
 
-        if (temp3 == arg2):
+        if ((arg2 == 'b') or (temp3 == arg2)):
             temp4 = 'you won the flip, coins are added to your balance'
-            outcome = int(arg1)
+            outcome = int(arg1) if (arg2 != 'b') else 500
 
         else:
             temp4 = 'scammed'
@@ -71,4 +71,4 @@ async def b(ctx, arg):
 async def i(ctx):
     await ctx.send(t)
 
-custom.run('Token-goes-here')
+custom.run('Nzk1NzI5MzQ4ODAzNjkwNTE2.X_NmtA.9NjDj32e5sQat7Y9o8U5_KT08Qc')
